@@ -5,16 +5,14 @@ def gcd(a, b):
         a, b = b, a % b
     return a
 
-def fast_mod_exp(base,exp,mod):
-    result=1
-    bi_list=[]
-    while exp>0:
-        bi_list.append(exp%2)
-        exp//=2    
-    for i in reversed(bi_list) :
-        result=result ** 2 % mod
-        if i==1:
-            result=result * base % mod
+def fast_mod_exp(base, exp, mod):
+    result = 1
+    base = base % mod
+    while exp > 0:
+        if exp % 2 == 1:
+            result = (result * base) % mod
+        base = (base * base) % mod
+        exp //= 2
     return result
 
 def get_cong_class(a,m):
@@ -41,9 +39,9 @@ def fermat_test_k(m,k):
 
 
 if __name__=="__main__":
-    with open("1.txt") as f1:
+    with open("ex1_secrets/1.txt") as f1:
         problem1 = f1.read()
-    with open("3.txt") as f3:
+    with open("ex1_secrets/3.txt") as f3:
         problem3 = f3.read()
     great_num1=int(problem1)
     great_num3=int(problem3)

@@ -82,7 +82,7 @@ class CongEquations:
 
 if __name__ == "__main__":
     print("========problem 5========")
-    with open("5.txt") as f5:
+    with open("ex2_secrets/5.txt") as f5:
         problem5 = f5.read().split()
     a_list_5 = [int(a) for a in problem5[:3]]
     m_list_5 = [int(m) for m in problem5[3:6]]
@@ -91,7 +91,7 @@ if __name__ == "__main__":
         ce5.display_CRT()
         ce5.test_ans()
     print("========problem 7========")
-    with open("7.txt") as f7:
+    with open("ex2_secrets/7.txt") as f7:
         problem7 = f7.read().split()
     a_list_7 = [int(a) for a in problem7[:3]]
     m_list_7 = [int(m) for m in problem7[3:6]]
